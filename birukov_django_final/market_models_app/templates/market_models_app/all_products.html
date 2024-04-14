@@ -7,13 +7,15 @@
   {% for product in products %}
   <div class="product">
     <h3 class="h3">{{ product.name }}</h3>
+    {% load static %}
     <img
       class="product_small_image"
-      src="{{ product.photo }}"
+      src="{{ product.photo.url }}"
       alt="product_image"
     />
     <p class="get_summary">{{ product.get_summary }}</p>
     <p class="price">{{ product.price }}</p>
+    <a href="{% url 'product_page' product.id %}">Подробнее</a>
   </div>
   {% endfor %}
 </div>
