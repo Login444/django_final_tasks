@@ -5,18 +5,17 @@
 {% block content %}
 <div class="product_table">
   {% for product in products %}
-  <div class="product">
-    <h3 class="h3">{{ product.name }}</h3>
-    {% load static %}
-    <img
-      class="product_small_image"
-      src="{{ product.photo.url }}"
-      alt="product_image"
-    />
-    <p class="get_summary">{{ product.get_summary }}</p>
-    <p class="price">{{ product.price }}</p>
-    <a href="{% url 'product_page' product.id %}">Подробнее</a>
+  <div class="product_small_card">
+    <div class="product_small_image_div">
+      {% load static %}
+    <img class="product_small_image" src="{{ product.photo.url }}" alt="{{ product.name }}"/>
+    </div>
+    <div class="product_small_description">
+      <h3 class="h3">{{ product.name }}</h3>
+      <p class="get_summary">{{ product.get_summary }}</p>
+      <p class="price">Цена: {{ product.price }}</p>
   </div>
+    </div>
   {% endfor %}
 </div>
 {% endblock %}

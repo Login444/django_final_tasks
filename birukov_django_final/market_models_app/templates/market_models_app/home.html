@@ -8,17 +8,18 @@
 <h2 class="h2">Наши товары:</h2>
 <div class="product_table">
   {% for product in products %}
-  <div class="product">
-    <h3 class="h3">{{ product.name }}</h3>
-    {% load static %}
-    <img
-      class="product_small_image"
-      src="{{ product.photo.url }}"
-      alt="{{ product.name }}"
-    />
-    <p class="get_summary">{{ product.get_summary }}</p>
-    <p class="price">{{ product.price }}</p>
+  <div class="product_small_card">
+    <div class="product_small_image_div">
+      {% load static %}
+    <img class="product_small_image" src="{{ product.photo.url }}" alt="{{ product.name }}"/>
+    </div>
+    <div class="product_small_description">
+      <h3 class="h3">{{ product.name }}</h3>
+      <p class="get_summary">{{ product.get_summary }}</p>
+      <p class="price">Цена: {{ product.price }}</p>
   </div>
+    </div>
+
   {% endfor %}
 </div>
 {% endif %}

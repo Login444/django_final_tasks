@@ -27,3 +27,4 @@ def product_page(request, product_id):
     context = {'title': product.name,
                'product': product}
     return render(request, 'market_models_app/product_page.html', context)
+
