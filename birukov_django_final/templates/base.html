@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>{% block title %} Market - {{ title }} {% endblock %}</title>
+  </head>
+  <header>
+    <div class="menu">
+      <a class="href" href="{% url 'home_page' %}">Home</a>
+      <a class="href" href="{% url 'all_products_page' %}">Products</a>
+    </div>
+  </header>
+  <body>
+    {% block content %} {% endblock %}
+  </body>
+  <footer>Это учебный проект.&copy;</footer>
+</html>
