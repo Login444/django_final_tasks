@@ -41,3 +41,4 @@ def category_page(request, category_id):
                'products': products}
     return render(request, 'market_models_app/category_page.html', context)
 
+
