@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}
+{{ title }}
+{% endblock %}
+{% block content %}
+<div class="product_table">
+  {% for product in products %}
+  <div class="product_small_card">
+    <div class="product_small_image_div">
+      {% load static %}
+    <img class="product_small_image" src="{{ product.photo.url }}" alt="{{ product.name }}"/>
+    </div>
+    <div class="product_small_description">
+      <h3 class="h3">{{ product.name }}</h3>
+      <p class="get_summary">{{ product.get_summary }}</p>
+      <p class="price">Цена: {{ product.price }}</p>
+      <a class="href_product" href="{% url 'product_page' product.id %}">Подробнее</a>
+  </div>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}
