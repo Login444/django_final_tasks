@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Client, Product, Order
+from .models import Client, Product, Order, Category
 from django.core.files.storage import FileSystemStorage
 from datetime import datetime, timedelta
 from random import choice
@@ -27,4 +27,19 @@ def product_page(request, product_id):
     context = {'title': product.name,
                'product': product}
     return render(request, 'market_models_app/product_page.html', context)
+
+def categories_page(request):
+    categories = Category.objects.all()
+    print(categories)
+    context = {'title': 'Categories',
+               'categories': categories}
+    return render(request, 'market_models_app/categories_page.html', context)
+
+def category_page(request, category_id):
+    category = Category.objects.filter(pk=category_id).first()
+    products = category.products.all()
+    print(products)
+    context = {'title' : category.name,
+               'products': products}
+    return render(request, 'market_models_app/category_page.html', context)
 

@@ -7,7 +7,7 @@ footer {
   margin-top: auto;
 }
 
-.href {
+.href_menu {
   text-decoration: none;
   color: darkgreen;
   font-size: 30px;
@@ -21,7 +21,7 @@ footer {
   display: flex;
   justify-content: center;
 }
-.product_table_home{
+.product_table_home {
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
@@ -42,14 +42,14 @@ footer {
   width: 200px;
   height: 200px;
 }
-.product_small_image_div{
-    display: flex;
+.product_small_image_div {
+  display: flex;
 }
-.product_small_description{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 500px;
+.product_small_description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
 }
 .product_page_image {
   width: 600px;
@@ -59,15 +59,27 @@ footer {
   display: flex;
 }
 .product_info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
-.h1{
-    display: flex;
-    justify-content: center;
+.h1 {
+  display: flex;
+  justify-content: center;
 }
-.h2{
-    display: flex;
-    justify-content: center;
+.h2 {
+  display: flex;
+  justify-content: center;
+}
+.categories_table {
+  display: flex;
+}
+.category_href {
+  display: flex;
+}
+.href_categories {
+  text-decoration: none;
+  color: rgb(17, 227, 129);
+  font-size: 28px;
+  line-height: 24px;
 }
